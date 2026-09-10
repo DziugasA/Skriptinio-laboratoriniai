@@ -7,3 +7,8 @@ plot(x, y, 'o-r', x, y/3, 'xb')
 title('Dvi funkcijos')
 xlabel('X-ai')
 ylabel('F_1 [-o-]   |   F_2 [-x-]')
+%% 
+doc sin
+help plot
+docsearch title
+%% 
