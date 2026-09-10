@@ -12,3 +12,10 @@ doc sin
 help plot
 docsearch title
 %% 
+N = 5;
+vektorius = N+1:0.5:N+4
+A = reshape(N:N+8,[3,3])'
+a = A(3,2)
+b = A(2:3,1:2)
+c = A([1,3],[1,3])
+sudeta = reshape([A(:);vektorius(:)],4,4)'
