@@ -6,6 +6,7 @@ figure;
 stem(y,"r");
 xlabel("X");
 ylabel("Y");
+legend("y = sin(t)");
 grid on;
 
 % b)
@@ -17,6 +18,12 @@ plot(x, y1, x, y2)
 axis([-pi, pi, min(y2), max(y1)])
 xlabel("X");
 ylabel("Y");
+legend("y = -x.^2 + 9", "y = x.^3 - 2.*x.^2 -9")
 grid on;
-
+%% 
+% 2. Specializuotu grafiku kurimas
+pazymiai = randi([0, 10], 6, 4);
+bar(pazymiai);
+sub
+stem(mean(pazymiai, 2));
 
