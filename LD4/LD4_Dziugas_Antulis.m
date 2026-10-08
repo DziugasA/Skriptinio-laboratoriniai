@@ -26,4 +26,19 @@ grid on;
 % b)
 clear
 close all
-x = 
+x = (2*rand(1, 200) - 1) .* sqrt(pi/2);
+y = (2*rand(1, 200) - 1) .* sqrt(pi/2);
+[X, Y] = meshgrid(x, y);
+f = sin((X.^2) + (Y.^2));
+surf(X, Y, f);
+colormap("jet")
+shading flat;
+colorbar;
+
+view(30, 30);
+
+xlabel('x');
+ylabel('y');
+zlabel('f(x,y)');
+title('f(x,y) = sin(x^2 + y^2)');
+grid on;
