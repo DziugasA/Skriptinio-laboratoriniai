@@ -22,6 +22,21 @@ disp(did)
 
 m = input("Iveskite m: ");
 n = input("Iveskite n: ");
-while m != n
-
-
+while m ~= n
+    disp("Is naujo");
+    m = input("Iveskite m: ");
+    n = input("Iveskite n: ");
+end
+disp("Sutampa");
+%% 
+% papildoma uzd.
+sakinys = input("Iveskite sakini su daugiau nei vienu tarpu tarp zodziu: ", "s");
+while ~contains(sakinys, "  ")
+    disp("Nera dvigubu tarpu");
+    sakinys = input("Iveskite sakini su daugiau nei vienu tarpu tarp zodziu: ", "s");
+end
+while contains(sakinys, "  ")
+    naujasSakinys = strrep(sakinys, "  " , " ");
+end
+disp(sakinys);
+disp

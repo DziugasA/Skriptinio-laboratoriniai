@@ -28,4 +28,19 @@ while m ~= n
     n = input("Iveskite n: ");
 end
 disp("Sutampa");
+%% 
+% papildoma uzd.
+clear
+sakinys = input("Iveskite sakini su daugiau nei vienu tarpu tarp zodziu: ", "s");
+while ~contains(sakinys, "  ")
+    disp("Nera dvigubu tarpu");
+    sakinys = input("Iveskite sakini su daugiau nei vienu tarpu tarp zodziu: ", "s");
+end
 
+naujasSakinys = strrep(sakinys, "  " , " ");
+while contains(naujasSakinys, "  ")
+    naujasSakinys = strrep(naujasSakinys, "  " , " ");
+end
+disp(naujasSakinys);
+disp("pasalintu tarpu kiekis: ");
+disp(count(sakinys, " ") - count(naujasSakinys, " "));
