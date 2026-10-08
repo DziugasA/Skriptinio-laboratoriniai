@@ -42,3 +42,26 @@ ylabel('y');
 zlabel('f(x,y)');
 title('f(x,y) = sin(x^2 + y^2)');
 grid on;
+%% 
+% papildoma uzduotis
+clear
+close all
+%[x, y] = meshgrid(linspace(-1, 1), linspace(-1 , 1));
+[X,Y] = meshgrid(-10:10,-10:10);
+z = 1 - (X.^2 + Y.^2);
+
+tiledlayout(3, 1);
+jets = nexttile;
+surf(X, Y, z);
+colormap(jets, jet);
+shading interp;
+
+cools = nexttile;
+surf(X, Y, z);
+colormap(cools, cool);
+shading flat;
+
+prisms = nexttile;
+surf(X, Y, z);
+colormap(prisms, prism);
+shading faceted;
