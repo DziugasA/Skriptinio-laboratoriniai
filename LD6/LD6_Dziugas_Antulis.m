@@ -10,4 +10,6 @@ funk2;
 figure
 plot(x, y, "k-.+");
 %% 
-
+clear all
+eil = 2*pi:-0.1:-2*pi;
+%[a, b] = grafsincos(eil);
